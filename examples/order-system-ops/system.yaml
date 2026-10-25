@@ -1,0 +1,39 @@
+# 対象と構成の登録例。実際の調査結果で更新する。
+schema_version: "0.1.0"
+id: "order-system"
+name: "受発注システム"
+readiness: draft
+repositories:
+  - id: repo-web
+    url: "ssh://git@example.invalid/order-system-web.git"
+  - id: repo-batch
+    url: "ssh://git@example.invalid/order-system-batch.git"
+  - id: repo-common
+    url: "ssh://git@example.invalid/order-system-common.git"
+applications:
+  - id: app-web
+    name: Webアプリ
+    kind: web
+    source_units:
+      - repository_id: repo-web
+        path: .
+        role: main
+  - id: app-batch
+    name: バッチ
+    kind: batch
+    source_units:
+      - repository_id: repo-batch
+        path: .
+        role: main
+components:
+  - id: lib-common
+    name: 共通ライブラリ
+    kind: library
+    source_units:
+      - repository_id: repo-common
+        path: .
+        role: main
+resources:
+  - id: db-main
+    name: 共有業務DB
+    kind: database

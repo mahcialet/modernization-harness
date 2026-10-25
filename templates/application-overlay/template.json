@@ -1,0 +1,30 @@
+{
+  "template_id": "application-overlay",
+  "template_version": "0.1.0",
+  "schema_version": "0.1.0",
+  "source_release_tag": "template-v0.1.0",
+  "source_commit": null,
+  "description": "既存アプリへの追加候補。空の一時領域に生成して差分レビューする。",
+  "parameters": {
+    "system_id": {
+      "pattern": "[a-z][a-z0-9-]{0,63}"
+    },
+    "application_id": {
+      "pattern": "[a-z][a-z0-9-]{0,63}"
+    }
+  },
+  "files": [
+    {
+      "path": "AGENTS.modernization.md",
+      "ownership": "seed"
+    },
+    {
+      "path": ".modernization/system-link.json",
+      "ownership": "seed"
+    },
+    {
+      "path": "docs/modernization/README.md",
+      "ownership": "seed"
+    }
+  ]
+}

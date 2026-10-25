@@ -1,0 +1,240 @@
+{
+  "base_dir": ".harness/template-base/e2789e3e9c0004bdf4cf87b90112b3220fc8ba4ecb6d3b795af4117c207c60ce",
+  "files": {
+    ".editorconfig": {
+      "base_sha256": "05f9463d683e5957ca2f7cad77a5fec2986298b1ea3c6ca314174805fa1aff44",
+      "ownership": "managed"
+    },
+    ".gitattributes": {
+      "base_sha256": "8d75fbed0329d55480242ea79c61cbdd3da312c700298bfba9572b81ec325cc6",
+      "ownership": "managed"
+    },
+    ".github/copilot-instructions.md": {
+      "base_sha256": "e09bf4a85a0c1f28a16ae33e8f2d5c37f375f0b4f97dfbb01b9ef8f5b9f82c4a",
+      "ownership": "managed"
+    },
+    ".gitignore": {
+      "base_sha256": "c0010b79ec618b76e12127afa395dc2c624e54a6b93fad8337221c44b1fbb78f",
+      "ownership": "managed"
+    },
+    ".harness/AGENTS.template.md": {
+      "base_sha256": "02674bb6040e65b5dfed49a47865b6324abe011ecc85a296189f86955ff3e7a4",
+      "ownership": "managed"
+    },
+    ".harness/agents/common.md": {
+      "base_sha256": "68ef284b08f341f6b420ac6c0a4dc955c14eefb9b4b8c22c05dc7e8620e9e471",
+      "ownership": "managed"
+    },
+    ".harness/agents/investigator-a.md": {
+      "base_sha256": "a8dba4ec57421a5a31eb173504d567839af229b86b255e0bafbf26429df292ae",
+      "ownership": "managed"
+    },
+    ".harness/agents/investigator-b.md": {
+      "base_sha256": "0cffe28a82144ae26bf7774702f5897e6dbc44149859e3a2d7b06f74e43b5c63",
+      "ownership": "managed"
+    },
+    ".harness/agents/investigator-c.md": {
+      "base_sha256": "09ad782b592e988bb7e5f49487176c0424f77f30056246ef0396fb7d51acf063",
+      "ownership": "managed"
+    },
+    ".harness/agents/investigator.md": {
+      "base_sha256": "8307e14bc3c6b362fb552d7254c3156948ae12100da082cb57981c3b5a6fb923",
+      "ownership": "managed"
+    },
+    ".harness/agents/maintainer.md": {
+      "base_sha256": "d1b53017dd8da915cca8f60efd6d0e5863ac062036a4bf69dbad2cbbacd148ac",
+      "ownership": "managed"
+    },
+    ".harness/agents/planner.md": {
+      "base_sha256": "e85d78ab86febab922b7bbfcb1f3893651e671a1d140dc8e27384d71edbf0767",
+      "ownership": "managed"
+    },
+    ".harness/agents/reconciler.md": {
+      "base_sha256": "c2565db85c0c9aa341d4c4d8965a4ec731249477073045b200d6cbd6b8234531",
+      "ownership": "managed"
+    },
+    ".harness/agents/template-maintainer.md": {
+      "base_sha256": "288c15dfaace0b54795ada911dc276c71a25bd148bb72b7658284b5c51a29a03",
+      "ownership": "managed"
+    },
+    ".harness/agents/verifier.md": {
+      "base_sha256": "3d1a38cc58e5f0c617a46a4f00a1b8488d3c19b4169b4f8fba08acb29644e793",
+      "ownership": "managed"
+    },
+    ".harness/procedures/dependency-graph.md": {
+      "base_sha256": "3d25314b5a7bd914b7893a0864a2696eb460ed4d77d930a92d5a84611a7febd2",
+      "ownership": "managed"
+    },
+    ".harness/procedures/ec2-validation.md": {
+      "base_sha256": "bcea3d02ae489b7325b09f99d44c25072918b9fca7c6ee333b474b9f45e67a5e",
+      "ownership": "managed"
+    },
+    ".harness/procedures/environment-providers.md": {
+      "base_sha256": "eeba7f9c6ab21617b2e46011a3bf8b363b910782157cb9dd6751287cebea328b",
+      "ownership": "managed"
+    },
+    ".harness/procedures/equivalence-verification.md": {
+      "base_sha256": "bd460e6d3216e9bb40e69183d865f10ff899abef060b858f09b161f4e715e5fe",
+      "ownership": "managed"
+    },
+    ".harness/procedures/maintenance.md": {
+      "base_sha256": "6c9726ffa96f650849d2fe19643408b659d490751e1bb7f7785ad1552236a9da",
+      "ownership": "managed"
+    },
+    ".harness/procedures/multi-agent-investigation.md": {
+      "base_sha256": "feca5e10c57bb03630fc54c9bcab1ec8314592651906fdb3c1da02e56aab5f1b",
+      "ownership": "managed"
+    },
+    ".harness/procedures/references.md": {
+      "base_sha256": "817ad5fdf62f17b5d547da2f8e7b1fb3a460d9fb8614c016d14e367607867d80",
+      "ownership": "managed"
+    },
+    ".harness/procedures/security-and-approvals.md": {
+      "base_sha256": "ebc816299e83be10921b75fd6d066fd1664bb493f65c0d4469e445ac8f7ee567",
+      "ownership": "managed"
+    },
+    ".harness/procedures/task-planning.md": {
+      "base_sha256": "bfbb657b29e5cd6b6c61517731e7d06d570960374a10d3b24bbc5af65ef8c242",
+      "ownership": "managed"
+    },
+    ".harness/procedures/template-versioning.md": {
+      "base_sha256": "83ece08f1d3d386f01715d6b705f53966aa2ecdf6697426e4b8fbfe76efd9751",
+      "ownership": "managed"
+    },
+    ".harness/prompts/investigate-only.md": {
+      "base_sha256": "9bb046f11ae902def44c465cb5667907beb9843b7149b0a119cca725abb921bc",
+      "ownership": "managed"
+    },
+    ".harness/prompts/template-update.md": {
+      "base_sha256": "5f91481eddc17cda5c88e6db93264322eeb8dc4ed5dc1aff360f209ff9b71d7b",
+      "ownership": "managed"
+    },
+    ".harness/record-templates/ADR.template.md": {
+      "base_sha256": "4dd178487e417f585ae1d2dd14c910aa4d665ab24aed7729d864c54f1a824cc5",
+      "ownership": "managed"
+    },
+    ".harness/record-templates/ExecPlan.template.md": {
+      "base_sha256": "62efbf38571f703b9f817f7d67296c2c4b4e59446e9bb57a02d81e6b003a0cae",
+      "ownership": "managed"
+    },
+    ".harness/record-templates/investigation-report.template.md": {
+      "base_sha256": "b94e81066f6d5109a0c06016031fea2c5636e0e94cf661b62ead667c4610453c",
+      "ownership": "managed"
+    },
+    ".harness/record-templates/reconciliation.template.md": {
+      "base_sha256": "8b196f33c784006eccc5c9a2ad621aff9ab3721086c293f064c77c264cc0790c",
+      "ownership": "managed"
+    },
+    "AGENTS.md": {
+      "base_sha256": "712598390fe85ecafbe1197fbef115c6ffcb79f5ac85f0edc5f62ad26857ce8a",
+      "ownership": "managed"
+    },
+    "AGENTS.project.md": {
+      "base_sha256": "cbde0d1ad78aff0d0d2b9299cfda676b57ca573309b1882cfaaf476ff2e7d7c5",
+      "ownership": "seed"
+    },
+    "README.md": {
+      "base_sha256": "d14e4d7e01de4b478496ffd2891e1bacfaef9c58593ab2f1c8ab852415ed14f2",
+      "ownership": "seed"
+    },
+    "decisions/README.md": {
+      "base_sha256": "284485b92a23530aca5d4fb993aa34a37336719286483d6376d96b1befc25285",
+      "ownership": "seed"
+    },
+    "deployments/README.md": {
+      "base_sha256": "3942ec4ff250a7fd8fd738319dd5248a2abb1cd514f0e1aa94494284a630111d",
+      "ownership": "seed"
+    },
+    "environments/local/README.md": {
+      "base_sha256": "543d7ece8eae6e2e08f146c83c373fada3761bc6f5a56daee4a1be48163f5a7f",
+      "ownership": "seed"
+    },
+    "environments/local/compose.yaml": {
+      "base_sha256": "5e9f541798fd66aaf43eb2542ebf56129a111966c0fa4b175858ddfa4faadf77",
+      "ownership": "seed"
+    },
+    "environments/local/environment.yaml": {
+      "base_sha256": "6b3aec01e7684c9df84017582f7c7ea085854463dc5af22171f8e9fecf7bd38e",
+      "ownership": "seed"
+    },
+    "environments/local/fixtures/README.md": {
+      "base_sha256": "a27ad3a4633c074643df0e3ea269cd5e9fcecf37b5c0507e321a970157b2e355",
+      "ownership": "seed"
+    },
+    "environments/production/environment.yaml": {
+      "base_sha256": "9e99c684a3f118802c07132092b8c2e16c30ba6ba6f644fa7576f8b716a82ac6",
+      "ownership": "seed"
+    },
+    "environments/staging/environment.yaml": {
+      "base_sha256": "2188ab3c29e05d4bd9844a5904ac8907115d78d1b243ad8b26fd9b08d740a4fd",
+      "ownership": "seed"
+    },
+    "inventory/README.md": {
+      "base_sha256": "1333945b298cdfcee7068bd40a3c012874273b0e1220423036443061d4462a9a",
+      "ownership": "seed"
+    },
+    "investigations/README.md": {
+      "base_sha256": "326c8b3b0af6f1209ea825835bc2f0dc2fc0fe7725d174f53491b525010ca0bb",
+      "ownership": "seed"
+    },
+    "maintenance/README.md": {
+      "base_sha256": "704937119e12c0c3a0cbcef055ed195c15684ba1bc7102c0ef899cf4b7b39df9",
+      "ownership": "seed"
+    },
+    "maintenance/policy.yaml": {
+      "base_sha256": "da44814ecf17472a6198c830a02f662a1ef16b0f909c4db456fc229f807486a4",
+      "ownership": "seed"
+    },
+    "plans/README.md": {
+      "base_sha256": "646fea2e4bf45dc3fb887b2f9b549dedf4d62404e0ecf709a222a4fb3f101451",
+      "ownership": "seed"
+    },
+    "plans/roadmap.md": {
+      "base_sha256": "3842301ea4d0cc39b7fb43b48dc09ec60687669ec4304f6d7ad87181e956a77e",
+      "ownership": "seed"
+    },
+    "repositories.lock.yaml": {
+      "base_sha256": "b6cfec009eff8b440f5005edbb8e4e7e29e06d07d830993dbfe44f18fbf0e60e",
+      "ownership": "seed"
+    },
+    "snapshots/README.md": {
+      "base_sha256": "4816fcbb87bee8ae5f5cd2a91602951cf578d85b49916554911574bb99b44402",
+      "ownership": "seed"
+    },
+    "system.yaml": {
+      "base_sha256": "91d5513b163d947e9f2da3c6c532201403495cc6cb1fb7629b99d41cf2d165bf",
+      "ownership": "seed"
+    },
+    "verification/accepted-differences/README.md": {
+      "base_sha256": "7a795f0fa8afed654e7943980349cd85fdd88eecd8bf6adeb3f17698e34afe21",
+      "ownership": "seed"
+    },
+    "verification/compatibility-matrix.yaml": {
+      "base_sha256": "49f4a2608233e6feccd2aa079b25dd73fdeebc25f59e48cf15c5f19b97d7bd44",
+      "ownership": "seed"
+    },
+    "verification/contracts/README.md": {
+      "base_sha256": "745d8f16899a568b630834e72cc11381278dcda43320c0f9e3b11edeb51d250f",
+      "ownership": "seed"
+    },
+    "verification/reports/README.md": {
+      "base_sha256": "0bbf7481f0581ce3657c1d36ce43ce8434673b06176658acf9bffdb82cd5405b",
+      "ownership": "seed"
+    },
+    "verification/scenarios/order-create.yaml": {
+      "base_sha256": "e220a02b23474e63249985e0be0516cf8b98683fc35ee0f1e5cc8351825cd149",
+      "ownership": "seed"
+    }
+  },
+  "schema_version": "0.1.0",
+  "source_commit": null,
+  "source_kind": "local-bundle",
+  "source_release_tag": "template-v0.1.0",
+  "template_digest": "e2789e3e9c0004bdf4cf87b90112b3220fc8ba4ecb6d3b795af4117c207c60ce",
+  "template_id": "system-ops",
+  "template_version": "0.1.0",
+  "values": {
+    "system_id": "order-system",
+    "system_name": "受発注システム"
+  }
+}

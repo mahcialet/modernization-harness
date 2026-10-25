@@ -1,0 +1,32 @@
+# システム構成の雛形。イメージ・設定・DB初期化は実調査後に固定する。
+# 同じファイルを新旧それぞれ別project名と別イメージ集合で使う。
+# 各IMAGE変数にはregistry/image@sha256:...を指定する。
+services:
+  web:
+    image: ${WEB_IMAGE:?固定したWebイメージが必要です}
+    networks: [isolated]
+    environment:
+      APP_DB_HOST: db
+      APP_EXTERNAL_ENDPOINT: http://external-stub:8080
+  batch:
+    image: ${BATCH_IMAGE:?固定したBatchイメージが必要です}
+    networks: [isolated]
+    environment:
+      APP_DB_HOST: db
+      APP_EXTERNAL_ENDPOINT: http://external-stub:8080
+  db:
+    image: ${DB_IMAGE:?調査したDB製品の固定イメージが必要です}
+    networks: [isolated]
+    volumes:
+      - db-data:${DB_DATA_DIR:?DB製品に対応した保存先を指定してください}
+  external-stub:
+    image: ${STUB_IMAGE:?固定したスタブイメージが必要です}
+    networks: [isolated]
+  probe:
+    image: ${PROBE_IMAGE:?固定した観測用イメージが必要です}
+    networks: [isolated]
+networks:
+  isolated:
+    internal: true
+volumes:
+  db-data: {}

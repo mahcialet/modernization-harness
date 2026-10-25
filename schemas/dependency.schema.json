@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:modernization-harness:dependency:0.1.0",
+  "title": "型付き依存関係",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "system_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "consumer_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "provider_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "kind": {
+      "enum": [
+        "build-library",
+        "runtime-api",
+        "shared-db-read",
+        "shared-db-write",
+        "event-produce",
+        "event-consume",
+        "file-produce",
+        "file-consume",
+        "batch-order",
+        "configuration"
+      ]
+    },
+    "contract": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "confidence": {
+      "enum": [
+        "confirmed",
+        "inferred",
+        "unknown"
+      ]
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "system_id",
+    "consumer_id",
+    "provider_id",
+    "kind",
+    "contract",
+    "environment_scope",
+    "confidence",
+    "evidence_ids"
+  ],
+  "additionalProperties": false
+}

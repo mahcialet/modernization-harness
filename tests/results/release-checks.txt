@@ -1,0 +1,12 @@
+JSON構文: 27ファイル成功（変数展開前の雛形を除く）
+YAML構文: 26ファイル成功（変数展開前の雛形を除く）
+Python構文: 5ファイル成功（変数展開前の雛形を除く）
+JSON Schema: 19件、schema_versionおよび$idの版0.1.0を確認
+構造化fixture: 形式・参照・Task DAG検査成功
+生成済みsystem-ops: manifest/lock、全適用基準、内容digest、全ファイルの再生成結果が一致
+テンプレート system-ops: 配布版・タグ・スキーマ・配布ファイル一覧の整合性成功
+テンプレート application-overlay: 配布版・タグ・スキーマ・配布ファイル一覧の整合性成功
+CLI: init → plan → digest承認apply → statusが成功（0.1.0から検査専用0.1.1）
+CLI: plan時の導入先非変更、managed更新、個別seedと独自記録の保持を確認
+CLI: application-overlayの初期化、状態確認、生成JSON構文が成功
+今回の検証でネットワーク接続、実アプリの起動、AWS操作、GitHub登録・タグ作成は実行していない。

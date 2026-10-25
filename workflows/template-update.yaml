@@ -1,0 +1,16 @@
+# ワークフローの設計定義。汎用実行エンジンは未実装。
+schema_version: 0.1.0
+execution_status: design
+stage: template-update
+input:
+- template-release
+- template-lock
+- local-files
+outputs:
+- update-plan
+- conflicts
+- new-lock
+approval: plan-digest
+preserve:
+- seed
+- system-owned-records

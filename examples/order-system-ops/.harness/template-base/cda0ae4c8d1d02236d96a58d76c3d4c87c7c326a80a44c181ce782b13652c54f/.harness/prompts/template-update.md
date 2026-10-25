@@ -1,0 +1,7 @@
+# テンプレート更新の依頼
+
+新しい配布元のCHANGELOG、manifest、schema変更を確認し、対象system-opsの適用版と独自変更を調べてください。
+`tools/template.py plan` で更新計画を生成し、旧基準・導入先・新基準を比較してください。
+managedファイルの競合は採用結果と理由を示し、seedと業務記録は導入先所有として保持してください。
+schema変更がある場合は専用のmigration Taskへ分けてください。
+レビュー済み計画のdigestで明示承認を得た後に適用し、テスト・lock・新基準・変更説明を同じPRにまとめてください。

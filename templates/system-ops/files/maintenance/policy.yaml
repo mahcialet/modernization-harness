@@ -1,0 +1,7 @@
+# 定期実行は運用承認後に有効化する。現時点は手動。
+schema_version: "0.1.0"
+mode: manual
+scheduled_enabled: false
+triggers: [source-change, dependency-change, incident, deployment-drift, lifecycle-review]
+review_owner: 未設定
+evidence_retention: 未設定

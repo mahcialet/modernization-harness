@@ -1,0 +1,21 @@
+# 実際の切替と復旧経路に存在する構成を、成果物digestで固定して検証する。
+schema_version: "0.1.0"
+readiness: draft
+system_id: "{{system_id}}"
+configurations:
+  - id: legacy-baseline
+    web: legacy
+    batch: legacy
+    database_schema: legacy
+    purpose: 比較基準
+  - id: mixed-web-modern
+    web: modern
+    batch: legacy
+    database_schema: backward-compatible
+    purpose: 段階切替と復旧
+  - id: modern-target
+    web: modern
+    batch: modern
+    database_schema: target
+    purpose: 移行後
+# 共通JARは独立サービスではなく各Web/Batch成果物の内包版をSnapshotで追跡する。

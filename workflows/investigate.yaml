@@ -1,0 +1,26 @@
+# ワークフローの設計定義。汎用実行エンジンは未実装。
+schema_version: 0.1.0
+execution_status: design
+stage: investigate
+input:
+- system
+- repository-lock
+- snapshot
+agents:
+- a
+- b
+- c
+shared_questions:
+- application-boundaries
+- transactions
+- authentication
+- cross-repository-dependencies
+- shared-data
+- runtime-assumptions
+isolation: independent-read-only-contexts
+outputs:
+- evidence
+- claim
+- coverage
+- unknown
+join: all-required-successful-attempts-sealed

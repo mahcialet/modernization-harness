@@ -1,0 +1,481 @@
+{
+  "schema_version": "0.1.0",
+  "fixture": true,
+  "description": "完全な架空データ。hash、ID、ソース、判断はvalidator検査用であり、実システムの調査・承認ではない。",
+  "system": {
+    "schema_version": "0.1.0",
+    "id": "order-system",
+    "name": "受発注システム",
+    "readiness": "draft",
+    "repositories": [
+      {
+        "id": "repo-web",
+        "url": "ssh://git@example.invalid/order-system-web.git"
+      },
+      {
+        "id": "repo-batch",
+        "url": "ssh://git@example.invalid/order-system-batch.git"
+      },
+      {
+        "id": "repo-common",
+        "url": "ssh://git@example.invalid/order-system-common.git"
+      }
+    ],
+    "applications": [
+      {
+        "id": "app-web",
+        "name": "Webアプリ",
+        "kind": "web",
+        "source_units": [
+          {
+            "repository_id": "repo-web",
+            "path": ".",
+            "role": "main"
+          }
+        ]
+      },
+      {
+        "id": "app-batch",
+        "name": "バッチ",
+        "kind": "batch",
+        "source_units": [
+          {
+            "repository_id": "repo-batch",
+            "path": ".",
+            "role": "main"
+          }
+        ]
+      }
+    ],
+    "components": [
+      {
+        "id": "lib-common",
+        "name": "共通ライブラリ",
+        "kind": "library",
+        "source_units": [
+          {
+            "repository_id": "repo-common",
+            "path": ".",
+            "role": "main"
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "id": "db-main",
+        "name": "共有業務DB",
+        "kind": "database"
+      }
+    ]
+  },
+  "repository_lock": {
+    "schema_version": "0.1.0",
+    "system_id": "order-system",
+    "readiness": "ready",
+    "repositories": [
+      {
+        "repository_id": "repo-web",
+        "ref": "main",
+        "commit": "1111111111111111111111111111111111111111"
+      },
+      {
+        "repository_id": "repo-batch",
+        "ref": "main",
+        "commit": "2222222222222222222222222222222222222222"
+      },
+      {
+        "repository_id": "repo-common",
+        "ref": "main",
+        "commit": "3333333333333333333333333333333333333333"
+      }
+    ]
+  },
+  "snapshots": [
+    {
+      "schema_version": "0.1.0",
+      "id": "SN-fixture-001",
+      "system_id": "order-system",
+      "created_at": "2026-10-25T10:00:00Z",
+      "repositories": [
+        {
+          "repository_id": "repo-web",
+          "commit": "1111111111111111111111111111111111111111"
+        },
+        {
+          "repository_id": "repo-batch",
+          "commit": "2222222222222222222222222222222222222222"
+        },
+        {
+          "repository_id": "repo-common",
+          "commit": "3333333333333333333333333333333333333333"
+        }
+      ],
+      "artifacts": [],
+      "configuration_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "initial_state_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "environment_id": "env-local"
+    }
+  ],
+  "runs": [
+    {
+      "schema_version": "0.1.0",
+      "id": "RUN-fixture-001",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "state": "awaiting_approval",
+      "prompt_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "agent_backend": "fixture",
+      "attempts": [
+        {
+          "id": "ATT-a",
+          "agent_id": "a",
+          "state": "succeeded",
+          "output_digest": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        {
+          "id": "ATT-b",
+          "agent_id": "b",
+          "state": "succeeded",
+          "output_digest": "2222222222222222222222222222222222222222222222222222222222222222"
+        },
+        {
+          "id": "ATT-c",
+          "agent_id": "c",
+          "state": "succeeded",
+          "output_digest": "3333333333333333333333333333333333333333333333333333333333333333"
+        },
+        {
+          "id": "ATT-d",
+          "agent_id": "d",
+          "state": "succeeded",
+          "output_digest": "4444444444444444444444444444444444444444444444444444444444444444"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "schema_version": "0.1.0",
+      "id": "EV-fixture-001",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "kind": "source",
+      "observation_layer": "declared",
+      "locator": {
+        "repository_id": "repo-web",
+        "commit": "1111111111111111111111111111111111111111",
+        "path": "src/main/resources/app.dicon",
+        "symbol": "transactionAdvice",
+        "line_start": 1
+      },
+      "content_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "captured_at": "2026-10-25T10:00:00Z",
+      "classification": "internal",
+      "summary": "架空fixture：TXインターセプタの設定宣言。実ソースの調査結果ではない。"
+    }
+  ],
+  "claims": [
+    {
+      "schema_version": "0.1.0",
+      "id": "CL-fixture-a",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "run_id": "RUN-fixture-001",
+      "agent_id": "a",
+      "subject_id": "app-web",
+      "statement": "架空fixture：設定上のTXインターセプタ宣言を確認した。",
+      "confidence": "confirmed",
+      "evidence_ids": [
+        "EV-fixture-001"
+      ],
+      "notes": "検証用の人工データ。"
+    },
+    {
+      "schema_version": "0.1.0",
+      "id": "CL-fixture-b",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "run_id": "RUN-fixture-001",
+      "agent_id": "b",
+      "subject_id": "app-web",
+      "statement": "架空fixture：設定上のTXインターセプタ宣言を確認した。",
+      "confidence": "confirmed",
+      "evidence_ids": [
+        "EV-fixture-001"
+      ],
+      "notes": "検証用の人工データ。"
+    },
+    {
+      "schema_version": "0.1.0",
+      "id": "CL-fixture-c",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "run_id": "RUN-fixture-001",
+      "agent_id": "c",
+      "subject_id": "app-web",
+      "statement": "架空fixture：設定上のTXインターセプタ宣言を確認した。",
+      "confidence": "confirmed",
+      "evidence_ids": [
+        "EV-fixture-001"
+      ],
+      "notes": "検証用の人工データ。"
+    }
+  ],
+  "findings": [
+    {
+      "schema_version": "0.1.0",
+      "id": "FD-fixture-tx",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "revision": 1,
+      "supersedes": null,
+      "subject_id": "app-web",
+      "statement": "架空fixture：TX宣言の照合。実利用は別途観測する。",
+      "status": "confirmed",
+      "claim_ids": [
+        "CL-fixture-a",
+        "CL-fixture-b",
+        "CL-fixture-c"
+      ],
+      "evidence_ids": [
+        "EV-fixture-001"
+      ],
+      "reason": "fixtureに定義した宣言を根拠に、宣言の存在だけを採用する。",
+      "followup": "実行時のTX境界を検証する。"
+    }
+  ],
+  "dependencies": [
+    {
+      "schema_version": "0.1.0",
+      "id": "DEP-fixture-build-library",
+      "system_id": "order-system",
+      "consumer_id": "app-web",
+      "provider_id": "lib-common",
+      "kind": "build-library",
+      "contract": "共通JARのAPI",
+      "environment_scope": [
+        "local"
+      ],
+      "confidence": "inferred",
+      "evidence_ids": [
+        "EV-fixture-001"
+      ]
+    },
+    {
+      "schema_version": "0.1.0",
+      "id": "DEP-fixture-shared-db-write",
+      "system_id": "order-system",
+      "consumer_id": "app-web",
+      "provider_id": "db-main",
+      "kind": "shared-db-write",
+      "contract": "ordersへの更新",
+      "environment_scope": [
+        "local"
+      ],
+      "confidence": "inferred",
+      "evidence_ids": [
+        "EV-fixture-001"
+      ]
+    }
+  ],
+  "inventory": {
+    "schema_version": "0.1.0",
+    "id": "INV-fixture-001",
+    "system_id": "order-system",
+    "snapshot_id": "SN-fixture-001",
+    "status": "draft",
+    "finding_ids": [
+      "FD-fixture-tx"
+    ],
+    "coverage": [
+      {
+        "area": "TX宣言",
+        "status": "confirmed",
+        "reason": "fixtureの設定を照合した。"
+      },
+      {
+        "area": "実EC2",
+        "status": "not-inspected",
+        "reason": "架空データに実環境がない。"
+      }
+    ],
+    "unknowns": [
+      "実際のTX境界"
+    ],
+    "approval_id": null
+  },
+  "decisions": [
+    {
+      "schema_version": "0.1.0",
+      "id": "ADR-fixture-001",
+      "system_id": "order-system",
+      "title": "TX比較シナリオを作る",
+      "status": "proposed",
+      "decision": "rollbackを観測する比較Scenarioを作る。",
+      "rationale": "宣言だけでは実際の境界を確認できないため。",
+      "finding_ids": [
+        "FD-fixture-tx"
+      ],
+      "approval_id": null
+    }
+  ],
+  "tasks": [
+    {
+      "schema_version": "0.1.0",
+      "id": "TASK-fixture-001",
+      "system_id": "order-system",
+      "title": "TX挙動の追加調査",
+      "kind": "investigation",
+      "status": "proposed",
+      "repository_ids": [
+        "repo-web",
+        "repo-common"
+      ],
+      "finding_ids": [
+        "FD-fixture-tx"
+      ],
+      "decision_ids": [
+        "ADR-fixture-001"
+      ],
+      "depends_on": [],
+      "acceptance": [
+        "正常時commitと途中失敗rollbackの観測方法を説明できる。"
+      ],
+      "verification_scenario_ids": [
+        "SC-order-create"
+      ],
+      "required_capabilities": [
+        "observe"
+      ],
+      "rollback": "読み取り調査の成果物を別Attemptとして保持する。",
+      "change_set_id": null
+    }
+  ],
+  "scenarios": [
+    {
+      "schema_version": "0.1.0",
+      "id": "SC-order-create",
+      "system_id": "order-system",
+      "title": "注文確定の比較例（実仕様に合わせて作成する）",
+      "status": "draft",
+      "required_capabilities": [
+        "reset",
+        "execute",
+        "observe"
+      ],
+      "effects": [
+        "db-write",
+        "external-send"
+      ],
+      "initial_state": {
+        "fixture_id": "FIX-order-example",
+        "status": "未作成"
+      },
+      "steps": [
+        {
+          "id": "step-1",
+          "action": "承認済み入力で注文確定を実行する",
+          "binding": "未確定"
+        }
+      ],
+      "observations": [
+        "http-response",
+        "order-state",
+        "inventory-delta",
+        "notification-count"
+      ],
+      "completion": {
+        "condition": "DB更新と外部送信の収束を確認する",
+        "timeout_seconds": 60
+      },
+      "normalization_rules": [],
+      "contract_refs": []
+    }
+  ],
+  "observations": [
+    {
+      "schema_version": "0.1.0",
+      "id": "OBS-fixture-legacy",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "scenario_id": "SC-order-create",
+      "side": "legacy",
+      "raw_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "normalized_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "evidence_ids": [
+        "EV-fixture-001"
+      ],
+      "initial_state_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "completed": true
+    },
+    {
+      "schema_version": "0.1.0",
+      "id": "OBS-fixture-modern",
+      "system_id": "order-system",
+      "snapshot_id": "SN-fixture-001",
+      "scenario_id": "SC-order-create",
+      "side": "modern",
+      "raw_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "normalized_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "evidence_ids": [
+        "EV-fixture-001"
+      ],
+      "initial_state_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "completed": true
+    }
+  ],
+  "comparisons": [
+    {
+      "schema_version": "0.1.0",
+      "id": "CMP-fixture-001",
+      "system_id": "order-system",
+      "scenario_id": "SC-order-create",
+      "legacy_observation_id": "OBS-fixture-legacy",
+      "modern_observation_id": "OBS-fixture-modern",
+      "result": "equivalent",
+      "accepted_difference_ids": [],
+      "observed_scope": [
+        "人工的に作った同じ観測digest"
+      ],
+      "unverified_scope": [
+        "実アプリの全動作"
+      ],
+      "reason": "fixtureの比較器検査例。実際の同等性を示すものではない。"
+    }
+  ],
+  "accepted_differences": [],
+  "environments": [
+    {
+      "schema_version": "0.1.0",
+      "id": "env-local",
+      "system_id": "order-system",
+      "provider": "compose",
+      "classification": "sandbox",
+      "readiness": "draft",
+      "capabilities": [
+        "describe",
+        "acquire",
+        "connect",
+        "health",
+        "observe",
+        "execute",
+        "reset",
+        "release"
+      ],
+      "allowed_operations": [
+        "observe",
+        "scenario-read",
+        "seed",
+        "scenario-write",
+        "reset"
+      ],
+      "requires_approval": true,
+      "binding": {
+        "status": "未確定。接続先と権限を調査して設定する。"
+      }
+    }
+  ],
+  "deployments": [],
+  "approvals": []
+}

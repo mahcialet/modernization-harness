@@ -1,0 +1,18 @@
+# ワークフローの設計定義。汎用実行エンジンは未実装。
+schema_version: 0.1.0
+execution_status: design
+stage: verify
+input:
+- approved-scenarios
+- snapshots
+- environments
+- execution-approval
+outputs:
+- observations
+- comparisons
+- verification-report
+checks:
+- capability-intersection
+- initial-state-equivalence
+- effect-isolation
+- accepted-difference-scope

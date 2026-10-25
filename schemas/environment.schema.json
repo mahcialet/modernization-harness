@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:modernization-harness:environment:0.1.0",
+  "title": "環境と能力",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "system_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "provider": {
+      "enum": [
+        "compose",
+        "ec2-observe",
+        "ec2-sandbox",
+        "agent-env"
+      ]
+    },
+    "classification": {
+      "enum": [
+        "local",
+        "sandbox",
+        "production"
+      ]
+    },
+    "readiness": {
+      "enum": [
+        "draft",
+        "ready"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "describe",
+          "acquire",
+          "connect",
+          "health",
+          "observe",
+          "execute",
+          "reset",
+          "release"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "allowed_operations": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "observe",
+          "scenario-read",
+          "seed",
+          "scenario-write",
+          "reset",
+          "fault-injection",
+          "deploy"
+        ]
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "requires_approval": {
+      "type": "boolean"
+    },
+    "binding": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "system_id",
+    "provider",
+    "classification",
+    "readiness",
+    "capabilities",
+    "allowed_operations",
+    "requires_approval",
+    "binding"
+  ],
+  "additionalProperties": false
+}

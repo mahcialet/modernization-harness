@@ -1,0 +1,14 @@
+# ワークフローの設計定義。汎用実行エンジンは未実装。
+schema_version: 0.1.0
+execution_status: design
+stage: reconcile
+input:
+- sealed-investigations
+- snapshot
+agent: d
+outputs:
+- finding
+- dependency
+- inventory-draft
+approval: inventory-digest
+incomplete_policy: partial-with-explicit-coverage

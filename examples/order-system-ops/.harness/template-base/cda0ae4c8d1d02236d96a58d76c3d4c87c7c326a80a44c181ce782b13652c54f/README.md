@@ -1,0 +1,20 @@
+# 受発注システムのシステム管理
+
+システムID：`order-system`。
+このリポジトリはアプリ群の構成、調査、判断、移行計画、比較検証、継続保守の正本である。
+初期状態はテンプレートの例。実repo、完全SHA、環境、承認者を調査して確定する。
+
+## 最初に行うこと
+`AGENTS.project.md` に個別条件を記入し、`system.yaml` に対象repo・アプリ・共通資源を登録する。
+`repositories.lock.yaml` は解決済みSHAの一覧に更新し、その状態から調査Snapshotを作る。
+調査指示は `.harness/prompts/investigate-only.md` を使う。
+
+## 記録の配置
+inventoryは現在の知識、investigationsはrun別の調査要約、decisionsは判断、plansは作業分解、
+verificationは比較契約と結果要約、maintenanceは保守情報、snapshotsは固定構成、deploymentsは実配備観測。
+大きなログやDBは外部証跡ストアに置き、このrepoには保存先とhashを記録する。
+
+## テンプレートの更新
+適用版は `.harness/template.lock.json` に記録される。
+配布元の `tools/template.py` で差分計画を作り、レビュー後に適用する。
+個別設定と業務記録は導入先所有として保持する。

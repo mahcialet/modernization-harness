@@ -1,0 +1,16 @@
+schema_version: 0.1.0
+id: env-production
+system_id: '{{system_id}}'
+provider: ec2-observe
+classification: production
+readiness: draft
+capabilities:
+- describe
+- connect
+- health
+- observe
+allowed_operations:
+- observe
+requires_approval: true
+binding:
+  status: 未確定。接続先と権限を調査して設定する。

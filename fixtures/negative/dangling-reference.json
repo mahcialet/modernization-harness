@@ -1,0 +1,7 @@
+{
+  "description": "存在しないEvidenceを参照するClaim",
+  "claim_id": "CL-x",
+  "evidence_ids": [
+    "EV-not-found"
+  ]
+}

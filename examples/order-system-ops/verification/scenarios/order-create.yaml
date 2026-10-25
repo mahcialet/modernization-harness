@@ -1,0 +1,29 @@
+schema_version: 0.1.0
+id: SC-order-create
+system_id: 'order-system'
+title: 注文確定の比較例（実仕様に合わせて作成する）
+status: draft
+required_capabilities:
+- reset
+- execute
+- observe
+effects:
+- db-write
+- external-send
+initial_state:
+  fixture_id: FIX-order-example
+  status: 未作成
+steps:
+- id: step-1
+  action: 承認済み入力で注文確定を実行する
+  binding: 未確定
+observations:
+- http-response
+- order-state
+- inventory-delta
+- notification-count
+completion:
+  condition: DB更新と外部送信の収束を確認する
+  timeout_seconds: 60
+normalization_rules: []
+contract_refs: []

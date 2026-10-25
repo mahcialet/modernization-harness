@@ -1,0 +1,6 @@
+{
+  "schema_version": "0.1.0",
+  "system_id": "{{system_id}}",
+  "application_id": "{{application_id}}",
+  "system_ops": "未設定：管理リポジトリの参照先を記入する"
+}

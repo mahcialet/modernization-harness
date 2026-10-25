@@ -1,0 +1,19 @@
+schema_version: 0.1.0
+id: env-staging
+system_id: '{{system_id}}'
+provider: ec2-sandbox
+classification: sandbox
+readiness: draft
+capabilities:
+- describe
+- connect
+- health
+- observe
+- execute
+- reset
+allowed_operations:
+- observe
+- scenario-read
+requires_approval: true
+binding:
+  status: 未確定。接続先と権限を調査して設定する。

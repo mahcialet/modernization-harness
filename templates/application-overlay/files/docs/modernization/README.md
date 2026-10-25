@@ -1,0 +1,5 @@
+# アプリケーション固有の移行検証
+
+Characterization Test、単体テスト、アプリのContainerfile/Dockerfile、DB migrationなどをこのrepoで保守する。
+横断シナリオと移行順序はsystem-opsが所有し、固定SHAと成果物digestで関連付ける。
+既存のbuildとtest配置を調査し、今ある構造に合わせて追加する。

@@ -1,0 +1,17 @@
+{
+  "description": "検証器が拒否する循環タスク",
+  "tasks": [
+    {
+      "id": "TASK-a",
+      "depends_on": [
+        "TASK-b"
+      ]
+    },
+    {
+      "id": "TASK-b",
+      "depends_on": [
+        "TASK-a"
+      ]
+    }
+  ]
+}

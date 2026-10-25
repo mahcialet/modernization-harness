@@ -1,0 +1,13 @@
+# ワークフローの設計定義。汎用実行エンジンは未実装。
+schema_version: 0.1.0
+execution_status: design
+stage: maintain
+input:
+- change-event
+- current-inventory
+- deployment
+outputs:
+- impact
+- stale-records
+- rediscovery-tasks
+scheduled_execution: opt-in

@@ -1,0 +1,240 @@
+{
+  "template_id": "system-ops",
+  "template_version": "0.1.0",
+  "schema_version": "0.1.0",
+  "source_release_tag": "template-v0.1.0",
+  "source_commit": null,
+  "description": "複数リポジトリを管理するシステム管理テンプレート",
+  "parameters": {
+    "system_id": {
+      "pattern": "[a-z][a-z0-9-]{0,63}"
+    },
+    "system_name": {}
+  },
+  "files": [
+    {
+      "path": ".editorconfig",
+      "ownership": "managed"
+    },
+    {
+      "path": ".gitattributes",
+      "ownership": "managed"
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".gitignore",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/AGENTS.template.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/common.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/investigator-a.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/investigator-b.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/investigator-c.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/investigator.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/maintainer.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/planner.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/reconciler.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/template-maintainer.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/agents/verifier.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/dependency-graph.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/ec2-validation.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/environment-providers.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/equivalence-verification.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/maintenance.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/multi-agent-investigation.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/references.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/security-and-approvals.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/task-planning.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/procedures/template-versioning.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/prompts/investigate-only.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/prompts/template-update.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/record-templates/ADR.template.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/record-templates/ExecPlan.template.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/record-templates/investigation-report.template.md",
+      "ownership": "managed"
+    },
+    {
+      "path": ".harness/record-templates/reconciliation.template.md",
+      "ownership": "managed"
+    },
+    {
+      "path": "AGENTS.md",
+      "ownership": "managed"
+    },
+    {
+      "path": "AGENTS.project.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "decisions/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "deployments/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "environments/local/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "environments/local/compose.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "environments/local/environment.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "environments/local/fixtures/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "environments/production/environment.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "environments/staging/environment.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "inventory/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "investigations/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "maintenance/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "maintenance/policy.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "plans/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "plans/roadmap.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "repositories.lock.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "snapshots/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "system.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "verification/accepted-differences/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "verification/compatibility-matrix.yaml",
+      "ownership": "seed"
+    },
+    {
+      "path": "verification/contracts/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "verification/reports/README.md",
+      "ownership": "seed"
+    },
+    {
+      "path": "verification/scenarios/order-create.yaml",
+      "ownership": "seed"
+    }
+  ]
+}
